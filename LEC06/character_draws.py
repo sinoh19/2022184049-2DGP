@@ -23,9 +23,10 @@ while running:
     if not running:
         break
 
-    radian = math.radians(angle)
-    x = center_x + radius * math.cos(radian)
-    y = center_y + radius * math.sin(radian)
+    if motion == 'circle':
+        radian = math.radians(angle)
+        x = center_x + radius * math.cos(radian)
+        y = center_y + radius * math.sin(radian)
 
     clear_canvas()
     grass.draw(400, 30)

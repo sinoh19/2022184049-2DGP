@@ -57,7 +57,7 @@ while running:
         elif square_side == 4:
             y += 4
             if y >= 300:
-                motion = 'done'
+                motion = 'triangle'
 
     elif motion == 'triangle':
         pass

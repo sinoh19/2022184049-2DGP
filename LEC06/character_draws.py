@@ -65,6 +65,8 @@ while running:
             y += 4
             if x <= 400:
                 triangle_side = 1
+        elif triangle_side == 1:
+            pass
 
     clear_canvas()
     grass.draw(400, 30)

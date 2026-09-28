@@ -13,6 +13,7 @@ center_y = 300
 radius = 200
 angle = 0
 motion = 'circle'
+square_side = 0
 running = True
 
 while running:
@@ -32,6 +33,9 @@ while running:
             motion = 'done'
         else:
             angle += 1
+
+    elif motion == 'square':
+        pass
 
     clear_canvas()
     grass.draw(400, 30)

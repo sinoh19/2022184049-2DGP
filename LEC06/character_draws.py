@@ -28,12 +28,16 @@ while running:
         x = center_x + radius * math.cos(radian)
         y = center_y + radius * math.sin(radian)
 
+        if angle == 360:
+            motion = 'done'
+        else:
+            angle += 1
+
     clear_canvas()
     grass.draw(400, 30)
     character.draw(x, y)
     update_canvas()
 
-    angle = (angle + 1) % 360
     delay(0.01)
 
 close_canvas()

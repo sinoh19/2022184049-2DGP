@@ -54,8 +54,9 @@ while running:
             if x >= 600:
                 square_side = 4
         elif square_side == 4:
-            if y < 300:
-                y += 4
+            y += 4
+            if y >= 300:
+                motion = 'done'
 
     clear_canvas()
     grass.draw(400, 30)

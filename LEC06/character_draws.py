@@ -30,7 +30,9 @@ while running:
         y = center_y + radius * math.sin(radian)
 
         if angle == 360:
-            motion = 'done'
+            motion = 'square'
+            x = 600
+            y = 300
         else:
             angle += 1
 

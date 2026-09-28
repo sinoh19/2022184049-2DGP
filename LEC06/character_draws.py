@@ -14,6 +14,7 @@ radius = 200
 angle = 0
 motion = 'circle'
 square_side = 0
+triangle_side = 0
 running = True
 
 while running:
@@ -57,6 +58,9 @@ while running:
             y += 4
             if y >= 300:
                 motion = 'done'
+
+    elif motion == 'triangle':
+        pass
 
     clear_canvas()
     grass.draw(400, 30)

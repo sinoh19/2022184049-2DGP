@@ -46,8 +46,9 @@ while running:
             if x <= 200:
                 square_side = 2
         elif square_side == 2:
-            if y > 100:
-                y -= 4
+            y -= 4
+            if y <= 100:
+                square_side = 3
 
     clear_canvas()
     grass.draw(400, 30)

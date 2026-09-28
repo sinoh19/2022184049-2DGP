@@ -61,9 +61,10 @@ while running:
 
     elif motion == 'triangle':
         if triangle_side == 0:
-            if x > 400:
-                x -= 4
-                y += 4
+            x -= 4
+            y += 4
+            if x <= 400:
+                triangle_side = 1
 
     clear_canvas()
     grass.draw(400, 30)

@@ -37,7 +37,8 @@ while running:
             angle += 1
 
     elif motion == 'square':
-        pass
+        if square_side == 0:
+            pass
 
     clear_canvas()
     grass.draw(400, 30)

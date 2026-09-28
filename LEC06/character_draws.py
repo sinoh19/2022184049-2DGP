@@ -12,6 +12,7 @@ center_x = 400
 center_y = 300
 radius = 200
 angle = 0
+motion = 'circle'
 running = True
 
 while running:

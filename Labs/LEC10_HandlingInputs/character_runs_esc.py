@@ -7,25 +7,41 @@ character = load_image('animation_sheet.png')
 
 # fill here
 
-
+running = True
 
 def handle_events():
-    # fill here
+
+    global running, dir
+
+    events = get_events()
+    for event in events:
+        if event.type == SDL_QUIT:
+            running = False 
+        elif event.type == SDL_KEYDOWN:
+            if event.key == SDLK_RIGHT:
+                dir += 1
+            elif event.key == SDLK_LEFT:
+                dir -= 1
+            elif event.key == SDLK_ESCAPE:
+                running = False
+            elif event.type == SDL_KEYUP:
+                if event.key == SDLK_RIGHT:
+                    dir -= 1
+                elif event.key == SDLK_LEFT:
+                    dir += 1
     pass
 
-
+running = True
+dir = 0
+x = 800 // 2
 frame = 0
-for x in range(0, 800, 5):
-
+while running:
     clear_canvas()
     grass.draw(400, 30)
-    character.clip_draw(frame * 100, 100, 100, 100, x, 90)
+    character.clip_draw(frame*100,100,100,100,x,90)
     update_canvas()
-
-    # fill here
-
-
-
+    handle_events()
+    x += dir * 5
     frame = (frame + 1) % 8
     delay(0.05)
 
